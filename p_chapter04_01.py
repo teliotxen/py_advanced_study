@@ -52,9 +52,23 @@ print(array_g.tolist())
 print(('%s' % c + str(n) for c in ['A', 'B', 'C', 'D'] for n in range(1,21)))
 
 for s in ('%s' % c + str(n) for c in ['A', 'B', 'C', 'D'] for n in range(1,21)):
-    print(s)
+    # print(s)
+    pass
 
 
+# 리스트 주의
+mark1 = [['~'] *5 for _ in range(5) ]
+mark2 = [['~'] *3]*4
 
 
+mark1[0][1] = 'x'
+mark2[0][1] = 'x'
+
+print(mark1)
+print(mark2)
+
+print([id(i) for i in mark1])
+print([id(i) for i in mark2])
+
+# 리스트를 그냥 복사하는 경우 해당 값의 ID 를 가져와서 붙이는 형태라서 하나가 바뀌면 다 바뀌게 된다.
 
